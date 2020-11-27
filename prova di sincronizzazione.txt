@@ -1,1 +1,3 @@
 questo file serve per verificare che il controllo di versione funzioni
+aggiungo una riga per provare a distribuire una modifica
+dato che sono bravo, aggiungo anche un'altra riga
