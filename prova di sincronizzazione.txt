@@ -1,0 +1,1 @@
+questo file serve per verificare che il controllo di versione funzioni
