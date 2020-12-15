@@ -102,3 +102,49 @@ INIZIO
 
 	STAMPA risultato
 FINE
+
+***ESERCIZIO 4***
+
+INIZIO
+	LEGGI numero
+
+	SE pari(numero)
+	ALLORA 
+		risultato = "pari"
+	ALTRIMENTI
+		risultato = "dispari"
+	FINE SE
+
+	STAMPA risultato
+FINE
+
+***accetta un numero***
+***restituisce VERO se il numero è pari***
+***restituisce FALSO se il numero è dispari***
+FUNZIONE pari(numero)
+	SE numero MODULO 2 = 0
+	ALLORA risultato = VERO
+	ALTRIMENTI risultato = FALSO
+
+	RESTITUISCI risultato
+FINE
+
+***MODULO calcola il resto della divisione***
+
+
+***ESERCIZIO 5***
+
+INIZIO
+	LEGGI numero1
+	LEGGI numero2
+	LEGGI numero3
+
+	SE numero1 > numero2
+	ALLORA 
+		risultato = numero1 + numero2 * numero3
+	ALTRIMENTI
+		risultato = (numero1 + numero2) / numero3
+	FINE SE
+
+	STAMPA risultato
+FINE
