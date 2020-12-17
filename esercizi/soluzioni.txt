@@ -148,3 +148,40 @@ INIZIO
 
 	STAMPA risultato
 FINE
+
+***ESERCIZIO 6***
+
+INIZIO
+	i = 0
+
+	PER 10 VOLTE
+		LEGGI numero[i]
+		i = i + 1
+	FINE PER
+
+	i = 0
+	risultato = numero[0]
+
+	PER 10 VOLTE
+		SE numero[i] < risultato
+		ALLORA risultato = numero[i]
+		ALTRIMENTI ***niente***
+		FINE SE
+	FINE PER
+
+	STAMPA risultato
+FINE
+
+***ESERCIZIO 7***
+
+INIZIO
+	LEGGI giorno
+
+	SE giorno = OGGI()
+	ALLORA risultato = "giusto"
+	ALTRIMENTI risultato = "sbagliato"
+	FINE SE
+
+	STAMPA risultato
+FINE
+
