@@ -1,3 +1,7 @@
 questo file serve per verificare che il controllo di versione funzioni
 aggiungo una riga per provare il controllo
 faccio un altro test: aggiungo una riga, ne tolgo una e ne modifico un'altra
+
+***IMPORTANTE***
+questa modifica non è presente nel ramo master, non sperate di vederla lì dentro"
+***FINE PARTE IMPORTANTE***
