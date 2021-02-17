@@ -1,10 +1,23 @@
 .quadrato{
 	width: 250px;
 	height: 250px;
+	float: left;
 }
 
 .bianco{
 	border-style: solid;
 	border-width: 1px;
 	border-color: #000;
+}
+
+.rosso{
+	background-color: #F00;
+}
+
+.verde{
+	background-color: #0F0;
+}
+
+.blu{
+	background-color: #00F;
 }

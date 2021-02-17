@@ -22,5 +22,4 @@ function print_div($classe, $id){
 	echo "<div class = '" . $classe . "' id = '" . $id . "'></div>";
 }
 
-
 ?>

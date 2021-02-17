@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<o!DOCTYPE html>
 <html lang="it">
 <head>
 	<meta charset="UTF-8">
@@ -18,13 +18,17 @@
 		print_button("rosso", "btnRosso");
 		print_button("verde", "btnVerde");
 		print_button("blu", "btnBlu");
+		print_button("alterna", "btnAlterna");
+
+		echo "<hr>";
 
 		/*
 		per dieci volte chiama la funzione print_div, passando "quadrato bianco"
 		*/
-		for ($i = 1; $i <= 10; $i++){
+		for ($i = 1; $i <= 25; $i++){
 			print_div("quadrato bianco", $i);
 		}
 	?>
 </body>
+<script src="js/manager.js"></script>
 </html>
