@@ -25,3 +25,13 @@
 	FROM prenotazioni
 	WHERE tipo_struttura='2 Stelle'
 	ORDER BY arrivo DESC
+8) SELECT DISTINCT clienti.nome, clienti.cognome
+	FROM clienti 
+	INNER JOIN prenotazioni ON clienti.ID_cliente = prenotazioni.cliente
+	WHERE  prenotazioni.arrivo < '2015-07-01'
+9) SELECT DISTINCT citta.citta, nome, cognome
+	FROM clienti 
+	INNER JOIN prenotazioni ON clienti.ID_cliente = prenotazioni.cliente 
+	INNER JOIN citta ON citta.id_citta = clienti.citta
+	WHERE prenotazioni.caparra < 50
+	AND prenotazioni.importo > 150

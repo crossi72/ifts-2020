@@ -1,0 +1,27 @@
+/* le immagini devono avere larghezza massima di 300pixel */
+img.immagine{
+    width: 300px;
+	display: block;
+}
+
+/* Gli oggetti con classe "sinistra" devono essere allineati a a sinistra */
+img.immagine .sinistra {
+	margin-left: 0px;
+}
+
+/* Gli oggetti con classe "centrato" devono essere allineati a al centro */
+.centrato {
+	display: block;
+    margin: 0px auto;
+}
+
+/* Gli oggetti con classe "centrato" devono essere allineati a al centro */
+.destra {
+	margin-left: auto;
+	margin-right: 0px;
+}
+
+.fluido {
+	float: left;
+}
+
