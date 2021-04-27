@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Versione server:              10.1.10-MariaDB - mariadb.org binary distribution
 -- S.O. server:                  Win32
--- HeidiSQL Versione:            9.5.0.5196
+-- HeidiSQL Versione:            11.2.0.6213
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -10,6 +10,7 @@
 /*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
 -- Dump della struttura del database ifts
@@ -18,11 +19,12 @@ CREATE DATABASE IF NOT EXISTS `ifts` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `ifts`;
 
 -- Dump della struttura di tabella ifts.citta
+DROP TABLE IF EXISTS `citta`;
 CREATE TABLE IF NOT EXISTS `citta` (
   `id_citta` int(11) NOT NULL AUTO_INCREMENT,
   `citta` varchar(255) DEFAULT NULL,
   `provincia_sigla` varchar(255) DEFAULT NULL,
-  `nome_provincia` varchar(255) DEFAULT NULL,
+  `provincia_nome` varchar(255) DEFAULT NULL,
   `regione` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_citta`),
   KEY `citta` (`citta`),
@@ -31,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `citta` (
 
 -- Dump dei dati della tabella ifts.citta: 350 rows
 /*!40000 ALTER TABLE `citta` DISABLE KEYS */;
-INSERT INTO `citta` (`id_citta`, `citta`, `provincia_sigla`, `nome_provincia`, `regione`) VALUES
+INSERT INTO `citta` (`id_citta`, `citta`, `provincia_sigla`, `provincia_nome`, `regione`) VALUES
 	(1, 'Acerra', 'NA', 'Napoli', 4),
 	(2, 'Adria', 'RO', 'Rovigo', 20),
 	(3, 'Afragola', 'NA', 'Napoli', 4),
@@ -385,6 +387,7 @@ INSERT INTO `citta` (`id_citta`, `citta`, `provincia_sigla`, `nome_provincia`, `
 /*!40000 ALTER TABLE `citta` ENABLE KEYS */;
 
 -- Dump della struttura di tabella ifts.clienti
+DROP TABLE IF EXISTS `clienti`;
 CREATE TABLE IF NOT EXISTS `clienti` (
   `ID_cliente` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) DEFAULT NULL,
@@ -1330,6 +1333,7 @@ INSERT INTO `clienti` (`ID_cliente`, `nome`, `cognome`, `dataNascita`, `citta`) 
 /*!40000 ALTER TABLE `clienti` ENABLE KEYS */;
 
 -- Dump della struttura di tabella ifts.prenotazioni
+DROP TABLE IF EXISTS `prenotazioni`;
 CREATE TABLE IF NOT EXISTS `prenotazioni` (
   `ID_prenotazione` int(11) NOT NULL AUTO_INCREMENT,
   `camera` varchar(255) DEFAULT NULL,
@@ -5677,8 +5681,7 @@ INSERT INTO `prenotazioni` (`ID_prenotazione`, `camera`, `arrivo`, `partenza`, `
 	(4327, '298', '2015-06-19 00:00:00', '2015-06-24 00:00:00', 421.61, 72.64, '4 Stelle', 5, 98.8500, 272),
 	(4328, '178', '2015-09-04 00:00:00', '2015-09-16 00:00:00', 163.75, 49.1, '2 Stelle', 12, 17.7375, 272),
 	(4329, '228', '2015-06-08 00:00:00', '2015-06-09 00:00:00', 430.5, 11.15, '5 Stelle', 1, 441.6500, 272),
-	(4330, '151', '2015-05-12 00:00:00', '2015-05-21 00:00:00', 93.53, 20.39, '2 Stelle', 9, 12.6578, 272);
-INSERT INTO `prenotazioni` (`ID_prenotazione`, `camera`, `arrivo`, `partenza`, `importo`, `caparra`, `tipo_struttura`, `giorni_permanenza`, `costo_giornaliero`, `cliente`) VALUES
+	(4330, '151', '2015-05-12 00:00:00', '2015-05-21 00:00:00', 93.53, 20.39, '2 Stelle', 9, 12.6578, 272),
 	(4331, '315', '2015-09-20 00:00:00', '2015-10-03 00:00:00', 228.08, 40.17, '2 Stelle', 13, 20.6346, 272),
 	(4332, '114', '2015-10-02 00:00:00', '2015-10-10 00:00:00', 414.51, 39.58, '4 Stelle', 8, 56.7612, 272),
 	(4333, '71', '2015-03-12 00:00:00', '2015-03-24 00:00:00', 173.78, 73.49, '2 Stelle', 12, 20.6058, 272),
@@ -9991,8 +9994,7 @@ INSERT INTO `prenotazioni` (`ID_prenotazione`, `camera`, `arrivo`, `partenza`, `
 	(8640, '118', '2015-08-06 00:00:00', '2015-08-19 00:00:00', 93.52, 14.352, '2 Stelle', 13, 8.2978, 56),
 	(8641, '13', '2015-02-18 00:00:00', '2015-02-25 00:00:00', 326.58, 72.21, '4 Stelle', 7, 56.9700, 56),
 	(8642, '173', '2015-06-20 00:00:00', '2015-06-30 00:00:00', 73.66, 73.37, '2 Stelle', 10, 14.7030, 56),
-	(8643, '189', '2015-08-20 00:00:00', '2015-08-29 00:00:00', 224.54, 39.95, '3 Stelle', 9, 29.3878, 55);
-INSERT INTO `prenotazioni` (`ID_prenotazione`, `camera`, `arrivo`, `partenza`, `importo`, `caparra`, `tipo_struttura`, `giorni_permanenza`, `costo_giornaliero`, `cliente`) VALUES
+	(8643, '189', '2015-08-20 00:00:00', '2015-08-29 00:00:00', 224.54, 39.95, '3 Stelle', 9, 29.3878, 55),
 	(8644, '296', '2015-03-13 00:00:00', '2015-03-14 00:00:00', 270.15, 68.82, '5 Stelle', 1, 338.9700, 55),
 	(8645, '191', '2015-09-23 00:00:00', '2015-09-25 00:00:00', 436.29, 42.5, '5 Stelle', 2, 239.3950, 55),
 	(8646, '233', '2015-04-14 00:00:00', '2015-04-23 00:00:00', 241.1, 22.14, '3 Stelle', 9, 29.2489, 55),
@@ -10201,7 +10203,8 @@ INSERT INTO `prenotazioni` (`ID_prenotazione`, `camera`, `arrivo`, `partenza`, `
 	(8849, '174', '2015-09-01 00:00:00', '2015-09-18 00:00:00', 412.95, 57.65, '3 Stelle', 17, 27.6824, 556),
 	(8850, '191', '2015-12-02 00:00:00', '2015-12-15 00:00:00', 200.89, 17.35, '2 Stelle', 13, 16.7877, 556),
 	(8851, '123', '2015-12-22 00:00:00', '2015-12-28 00:00:00', 447.73, 63.57, '4 Stelle', 6, 85.2167, 556),
-	(8852, '120', '2015-12-16 00:00:00', '2015-12-25 00:00:00', 92.01, 14.201, '2 Stelle', 9, 11.8012, 556),
+	(8852, '120', '2015-12-16 00:00:00', '2015-12-25 00:00:00', 92.01, 14.201, '2 Stelle', 9, 11.8012, 556);
+INSERT INTO `prenotazioni` (`ID_prenotazione`, `camera`, `arrivo`, `partenza`, `importo`, `caparra`, `tipo_struttura`, `giorni_permanenza`, `costo_giornaliero`, `cliente`) VALUES
 	(8853, '259', '2015-11-09 00:00:00', '2015-11-21 00:00:00', 393.73, 41.31, '3 Stelle', 12, 36.2533, 556),
 	(8854, '175', '2015-09-02 00:00:00', '2015-09-21 00:00:00', 76.37, 66.25, '2 Stelle', 19, 7.5063, 189),
 	(8855, '340', '2015-01-13 00:00:00', '2015-01-30 00:00:00', 444.98, 62.1, '3 Stelle', 17, 29.8282, 189),
@@ -10621,6 +10624,7 @@ INSERT INTO `prenotazioni` (`ID_prenotazione`, `camera`, `arrivo`, `partenza`, `
 /*!40000 ALTER TABLE `prenotazioni` ENABLE KEYS */;
 
 -- Dump della struttura di tabella ifts.regioni
+DROP TABLE IF EXISTS `regioni`;
 CREATE TABLE IF NOT EXISTS `regioni` (
   `ID_regione` int(11) NOT NULL AUTO_INCREMENT,
   `regione` varchar(255) DEFAULT NULL,
@@ -10656,5 +10660,6 @@ INSERT INTO `regioni` (`ID_regione`, `regione`, `area_geografica`) VALUES
 /*!40000 ALTER TABLE `regioni` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
